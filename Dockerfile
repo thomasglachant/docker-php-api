@@ -24,7 +24,7 @@ RUN set -xe \
 
 COPY php.ini /usr/local/etc/php/php.ini
 
-COPY docker/app/install-composer.sh /usr/local/bin/docker-app-install-composer
+COPY install-composer.sh /usr/local/bin/docker-app-install-composer
 RUN chmod +x /usr/local/bin/docker-app-install-composer
 
 RUN set -xe \
