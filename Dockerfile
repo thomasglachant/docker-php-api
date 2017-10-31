@@ -25,8 +25,8 @@ RUN set -xe \
 	&& apk del .build-deps
 
 COPY --from=0 /usr/bin/composer /usr/bin/composer
-COPY docker/php/php.ini /usr/local/etc/php/php.ini
-COPY docker/php/docker-entrypoint.sh /usr/local/bin/docker-entrypoint
+COPY php.ini /usr/local/etc/php/php.ini
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint
 RUN chmod +x /usr/local/bin/docker-entrypoint
 
 WORKDIR /srv/api
